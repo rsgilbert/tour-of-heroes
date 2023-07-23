@@ -5,18 +5,21 @@ import { Observable, of } from 'rxjs'
 import { MessageService } from './message.service';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class HeroService {
 
-  constructor(private messageService: MessageService) { }
+    constructor(private messageService: MessageService) { }
 
-  getHeroes() : Observable<Hero[]> {
-    // for(let i = 0; i < 1000_000_000;i++) {
-    //     console.log(i)
-    // }
-    const heroes = of(HEROES)
-    this.messageService.add('HeroService: fetched heroes')
-    return heroes;
-  }
+    getHeroes(): Observable<Hero[]> {
+        const heroes = of(HEROES)
+        this.messageService.add('HeroService: fetched heroes')
+        return heroes;
+    }
+
+    getHero(id: number): Observable<Hero | undefined> {
+        const hero = HEROES.find(h => h.id === id)
+        this.messageService.add(`HeroService: fetched a single hero with id ${id}`)
+        return of(hero)
+    }
 }
