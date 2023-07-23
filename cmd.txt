@@ -1,0 +1,2 @@
+// generate app routing module 
+ng generate module app-routing --flat --module=app 
