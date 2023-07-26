@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 const routes: Routes = [
     {
@@ -22,6 +23,10 @@ const routes: Routes = [
     {
         path: 'detail/:id',
         component: HeroDetailComponent
+    },
+    {
+        path: 'new',
+        component: HeroFormComponent
     }
 ]
 
