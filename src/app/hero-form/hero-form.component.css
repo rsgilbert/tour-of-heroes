@@ -1,11 +1,4 @@
-input.ng-invalid, select.ng-invalid {
-    background-color: lightcoral;
-}
 
-input.ng-valid, select.ng-valid  {
-    background-color: green;
-    color: white;
-}
 form {
     padding: 8px 16px;
     border: 3px dotted;

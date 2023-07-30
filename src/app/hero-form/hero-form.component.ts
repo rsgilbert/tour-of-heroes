@@ -9,10 +9,14 @@ import { Hero } from '../hero';
 export class HeroFormComponent {
     powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer']
     model = new Hero(18, '', 'Super Hot', 'Chameleone')
-    submitted = false 
+    submitted = true 
 
     onSubmit() { 
         this.submitted = true 
+    }
+
+    newHero() {
+        this.model = new Hero(42, '', '')
     }
 
 }
