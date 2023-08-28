@@ -1,2 +1,8 @@
 // generate app routing module 
 ng generate module app-routing --flat --module=app 
+
+// generate component
+ng generate component colors
+
+
+

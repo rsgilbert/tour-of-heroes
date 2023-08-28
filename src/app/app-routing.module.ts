@@ -5,6 +5,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { ColorsComponent } from './colors/colors.component';
 
 const routes: Routes = [
     {
@@ -17,7 +18,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/new',
+        redirectTo: '/colors',
         pathMatch: 'full'
     },
     {
@@ -27,6 +28,10 @@ const routes: Routes = [
     {
         path: 'new',
         component: HeroFormComponent
+    },
+    {
+        path: 'colors',
+        component: ColorsComponent
     }
 ]
 
